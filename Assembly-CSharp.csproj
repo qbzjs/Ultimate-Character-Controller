@@ -56,12 +56,82 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CSharpBase\StuForeach.cs" />
-    <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\CSharpBase\StuIF.cs" />
+    <Compile Include="Assets\Scripts\Chapter13\FogWithDepthTexture.cs" />
+    <Compile Include="Assets\Scripts\Chapter12\EdgeDetection.cs" />
+    <Compile Include="Assets\Scripts\Chapter13\MotionBlurWithDepthTexture.cs" />
+    <Compile Include="Assets\Scripts\Chapter10\ProceduralTextureGeneration.cs" />
+    <Compile Include="Assets\Scripts\Chapter13\IntersectionHighlights.cs" />
+    <Compile Include="Assets\Scripts\Chapter13\EdgeDetectNormalsAndDepth.cs" />
+    <Compile Include="Assets\Scripts\Chapter12\PostEffectsBase.cs" />
+    <Compile Include="Assets\Scripts\Chapter12\MotionBlur.cs" />
+    <Compile Include="Assets\Scripts\Chapter15\FogWithNoise.cs" />
+    <Compile Include="Assets\Scripts\Helpers\SetPropertyAttribute.cs" />
+    <Compile Include="Assets\Scripts\Chapter12\Bloom.cs" />
+    <Compile Include="Assets\Scripts\Chapter12\GaussianBlur.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Rotating.cs" />
+    <Compile Include="Assets\Scripts\Chapter15\BurnHelper.cs" />
+    <Compile Include="Assets\Scripts\Chapter12\BrightnessSaturationAndContrast.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Translating.cs" />
+    <Compile Include="Assets\Scripts\Chapter5\ColorPicker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\MyShader\5-2.shader" />
+    <None Include="Assets\Shaders\Chapter14\Chapter14-Hatching.shader" />
+    <None Include="Assets\Shaders\Chapter15\Chapter15-WaterWave.shader" />
+    <None Include="Assets\Shaders\Chapter8\Chapter8-AlphaBlendBothSided.shader" />
+    <None Include="Assets\Shaders\Chapter6\Chapter6-BlinnPhongUseBuildInFunctions.shader" />
+    <None Include="Assets\Shaders\Chapter7\Chapter7-NormalMapWorldSpace.shader" />
+    <None Include="Assets\Shaders\Chapter7\Chapter7-SingleTexture.shader" />
+    <None Include="Assets\Shaders\Chapter15\Chapter15-Dissolve.shader" />
+    <None Include="Assets\Shaders\Chapter13\Chapter13-EdgeDetectNormalAndDepth.shader" />
+    <None Include="Assets\Shaders\Chapter17\Chapter17-NormalExtrusion.shader" />
+    <None Include="Assets\Shaders\Chapter9\Chapter9-AlphaTestWithShadow.shader" />
+    <None Include="Assets\Shaders\Common\BumpedSpecular.shader" />
+    <None Include="Assets\Shaders\Chapter10\Chapter10-Reflection.shader" />
+    <None Include="Assets\Shaders\Chapter9\Chapter9-AlphaBlendWithShadow.shader" />
+    <None Include="Assets\Shaders\Chapter11\Chapter11-Water.shader" />
+    <None Include="Assets\Shaders\Chapter12\Chapter12-EdgeDetection.shader" />
+    <None Include="Assets\Shaders\Chapter6\Chapter6-DiffusePixelLevel.shader" />
+    <None Include="Assets\Shaders\Chapter7\Chapter7-NormalMapTangentSpace.shader" />
+    <None Include="Assets\Shaders\Chapter6\Chapter6-SpecularPixelLevel.shader" />
+    <None Include="Assets\Shaders\Chapter9\Chapter9-ForwardRendering.shader" />
+    <None Include="Assets\Shaders\Chapter8\Chapter8-BlendOperations.shader" />
+    <None Include="Assets\Shaders\Chapter8\Chapter8-BlendOperations 1.shader" />
+    <None Include="Assets\Shaders\Chapter3\ShaderLabProperties.shader" />
+    <None Include="Assets\Shaders\Chapter15\Chapter15-FogWithNoise.shader" />
+    <None Include="Assets\Shaders\Chapter12\Chapter12-Bloom.shader" />
+    <None Include="Assets\Shaders\Chapter9\Chapter9-Shadow.shader" />
+    <None Include="Assets\Shaders\Chapter7\Chapter7-RampTexture.shader" />
+    <None Include="Assets\Shaders\Chapter11\Chapter11-Billboard.shader" />
+    <None Include="Assets\Shaders\Chapter11\Chapter11-ImageSequenceAnimation.shader" />
+    <None Include="Assets\Shaders\Chapter11\Chapter11-VertexAnimationWIthShadow.shader" />
+    <None Include="Assets\Shaders\Chapter12\Chapter12-GaussianBlur.shader" />
+    <None Include="Assets\Shaders\Chapter10\Chapter10-Fresnel.shader" />
+    <None Include="Assets\Shaders\Chapter12\Chapter12-BrightnessSaturationAndContrast.shader" />
+    <None Include="Assets\Shaders\Chapter6\Chapter6-DiffuseVertexLevel.shader" />
+    <None Include="Assets\Shaders\Common\BumpedDiffuse.shader" />
+    <None Include="Assets\Shaders\Chapter10\Chapter10-Refraction.shader" />
+    <None Include="Assets\Shaders\Chapter10\Chapter10-GlassRefraction.shader" />
+    <None Include="Assets\Shaders\Chapter10\Chapter10-Mirror.shader" />
+    <None Include="Assets\Shaders\Chapter6\Chapter6-HalfLambert.shader" />
+    <None Include="Assets\Shaders\Chapter13\Chapter13-MotionBlurWithDepthTexture.shader" />
+    <None Include="Assets\Shaders\Chapter6\Chapter6-BlinnPhong.shader" />
+    <None Include="Assets\Shaders\Chapter5\Chapter5-SimpleShader.shader" />
+    <None Include="Assets\Shaders\Chapter17\Chapter17-BumpedDiffuse.shader" />
+    <None Include="Assets\Shaders\Chapter8\Chapter8-AlphaBlend.shader" />
+    <None Include="Assets\Shaders\Chapter5\Chapter5-FalseColor.shader" />
+    <None Include="Assets\Shaders\Chapter7\Chapter7-TextureProperties.shader" />
+    <None Include="Assets\Shaders\Chapter8\Chapter8-AlphaTestBothSided.shader" />
+    <None Include="Assets\Shaders\Chapter12\Chapter12-MotionBlur.shader" />
+    <None Include="Assets\Shaders\Chapter13\Chapter13-FogWithDepthTexture.shader" />
+    <None Include="Assets\Shaders\Chapter14\Chapter14-ToonShading.shader" />
+    <None Include="Assets\Shaders\Chapter18\SimpleBlend.shader" />
+    <None Include="Assets\Shaders\Chapter6\Chapter6-SpecularVertexLevel.shader" />
+    <None Include="Assets\Shaders\Chapter7\Chapter7-MaskTexture.shader" />
+    <None Include="Assets\Shaders\Chapter8\Chapter8-AlphaBlendZWrite.shader" />
+    <None Include="Assets\Shaders\Chapter3\Redify.shader" />
+    <None Include="Assets\Shaders\Chapter8\Chapter8-AlphaTest.shader" />
+    <None Include="Assets\Shaders\Chapter9\Chapter9-AttenuationAndShadowUseBuildInFunctions.shader" />
+    <None Include="Assets\Shaders\Chapter11\Chapter11-ScrollingBackground.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -309,9 +379,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.5\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -697,12 +764,6 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -721,9 +782,6 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -736,9 +794,6 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -747,9 +802,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
