@@ -1,0 +1,213 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.6f1 (8c4e826ba445) revision 9195138'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.18363) 64bit Professional' Language: 'zh' Physical Memory: 16253 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+E:\Path\U3DEditor\2021.2.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+E:/Project/Unity/U3DStu
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+14502
+Successfully changed project path to: E:/Project/Unity/U3DStu
+E:/Project/Unity/U3DStu
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 48.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.6f1 (8c4e826ba445)
+[Subsystems] Discovering subsystems at path E:/Path/U3DEditor/2021.2.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Project/Unity/U3DStu/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'E:/Path/U3DEditor/2021.2.6f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Path/U3DEditor/2021.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/Path/U3DEditor/2021.2.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56980
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Path/U3DEditor/2021.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001818 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 48.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.415 seconds
+Domain Reload Profiling:
+	ReloadAssembly (415ms)
+		BeginReloadAssembly (50ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (313ms)
+			LoadAssemblies (49ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (69ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (187ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (49ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (94ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003766 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Project\Unity\U3DStu\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Project\Unity\U3DStu\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.661 seconds
+Domain Reload Profiling:
+	ReloadAssembly (663ms)
+		BeginReloadAssembly (74ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (14ms)
+		EndReloadAssembly (524ms)
+			LoadAssemblies (46ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (148ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (260ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (51ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3168 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (398.5 KB). Loaded Objects now: 3630.
+Memory consumption went from 128.1 MB to 127.7 MB.
+Total: 2.180800 ms (FindLiveObjects: 0.197700 ms CreateObjectMapping: 0.086700 ms MarkObjects: 1.729900 ms  DeleteObjects: 0.165600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 103496.472345 seconds.
+  path: Assets/Scenes/Chapter8
+  artifactKey: Guid(e2b1f6aaab07c4ab8b7f2236d4dad47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Chapter8 using Guid(e2b1f6aaab07c4ab8b7f2236d4dad47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b65bc9901a0942a827f38181c20b36') in 0.004895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.955868 seconds.
+  path: Assets/Scenes/Chapter8/Scene_8_3.unity
+  artifactKey: Guid(8fcb1c94ee9a74691af8337f857571bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Chapter8/Scene_8_3.unity using Guid(8fcb1c94ee9a74691af8337f857571bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7037241e4da5200c7e4b04b51a85286') in 0.007659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2099.230182 seconds.
+  path: Assets/Shaders/Chapter8
+  artifactKey: Guid(9d524d966b7e84447a6d0ef01e1b1622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter8 using Guid(9d524d966b7e84447a6d0ef01e1b1622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdc3e3700038ba0141c4c81e6ce7ba3e') in 0.000834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.441357 seconds.
+  path: Assets/Shaders/Chapter8/Chapter8-AlphaBlendZWrite.shader
+  artifactKey: Guid(bddcbefb926634718829a8fc1ec5df6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter8/Chapter8-AlphaBlendZWrite.shader using Guid(bddcbefb926634718829a8fc1ec5df6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2750c9efc47abf56666188b8d5e6d516') in 0.012347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.013951 seconds.
+  path: Assets/Shaders/Chapter8/Chapter8-AlphaBlendBothSided.shader
+  artifactKey: Guid(d0b54ae82e3da410e940d1974efd311b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter8/Chapter8-AlphaBlendBothSided.shader using Guid(d0b54ae82e3da410e940d1974efd311b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f23ef44e46f4edf06049b9e10119453') in 0.000987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.728285 seconds.
+  path: Assets/Shaders/Chapter8/Chapter8-AlphaBlend.shader
+  artifactKey: Guid(9ab5c065e7d13494c8108f401bbc9b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter8/Chapter8-AlphaBlend.shader using Guid(9ab5c065e7d13494c8108f401bbc9b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88f5932d1e8e9c6cf3148cd854469bd2') in 0.000826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.468951 seconds.
+  path: Assets/Shaders/Chapter8/Chapter8-AlphaTest.shader
+  artifactKey: Guid(edeb7d1c16e7e473d8e3a6ba8f9f7ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter8/Chapter8-AlphaTest.shader using Guid(edeb7d1c16e7e473d8e3a6ba8f9f7ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a032c09f03b82e7acebb4dd3fb9715ac') in 0.000889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.630423 seconds.
+  path: Assets/Shaders/Chapter3
+  artifactKey: Guid(4248dee8e02e54e9ca3cc2ab919ffe83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter3 using Guid(4248dee8e02e54e9ca3cc2ab919ffe83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '093b27d03170ed2e1906b28729f005d3') in 0.000762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2370.371572 seconds.
+  path: Assets/Shaders/Chapter8/Chapter8-AlphaTest.shader
+  artifactKey: Guid(edeb7d1c16e7e473d8e3a6ba8f9f7ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter8/Chapter8-AlphaTest.shader using Guid(edeb7d1c16e7e473d8e3a6ba8f9f7ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8811385e288597af8d4537dfdad4c323') in 0.001143 seconds 
