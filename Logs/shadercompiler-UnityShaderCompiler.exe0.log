@@ -1,3 +1,6 @@
 Base path: 'E:/Path/U3DEditor/2021.2.6f1/Editor/Data', plugins path 'E:/Path/U3DEditor/2021.2.6f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
+Cmd: shutdown
+
+Quitting shader compiler process
