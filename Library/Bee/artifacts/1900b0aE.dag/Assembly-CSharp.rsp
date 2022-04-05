@@ -338,6 +338,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/AnimatorSystem/Script/test.cs"
 "Assets/UnityShaderBook/Scripts/Chapter10/ProceduralTextureGeneration.cs"
 "Assets/UnityShaderBook/Scripts/Chapter12/Bloom.cs"
 "Assets/UnityShaderBook/Scripts/Chapter12/BrightnessSaturationAndContrast.cs"

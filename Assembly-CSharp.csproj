@@ -73,6 +73,7 @@
     <Compile Include="Assets\UnityShaderBook\Scripts\Chapter12\BrightnessSaturationAndContrast.cs" />
     <Compile Include="Assets\UnityShaderBook\Scripts\Helpers\Translating.cs" />
     <Compile Include="Assets\UnityShaderBook\Scripts\Chapter5\ColorPicker.cs" />
+    <Compile Include="Assets\AnimatorSystem\Script\test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityShaderBook\Shaders\Chapter14\Chapter14-Hatching.shader" />
