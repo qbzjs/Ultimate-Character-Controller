@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerState : ScriptableObject, IState
 {
-    Animator animatior;
-    PlayerStateMachine stateMachine;
+    protected Animator animator;
+    protected PlayerStateMachine stateMachine;
     
-    public void Initialize(Animator animator,PlayerStateMachine stateMachine)
+    public void Initialize(Animator animator, PlayerStateMachine stateMachine)
     {
-        this.animatior = animatior;
+        this.animator = animator;
         this.stateMachine = stateMachine;
     }
 
