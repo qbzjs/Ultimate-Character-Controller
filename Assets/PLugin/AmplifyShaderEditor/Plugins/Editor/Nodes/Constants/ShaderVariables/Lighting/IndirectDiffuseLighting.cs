@@ -16,6 +16,7 @@ namespace AmplifyShaderEditor
 
 		private int m_cachedIntensityId = -1;
 
+		private const string FwdBasePragma = "#pragma multi_compile_fwdbase";
 
 		private readonly string LWIndirectDiffuseHeader = "ASEIndirectDiffuse( {0}, {1})";
 		private readonly string[] LWIndirectDiffuseBody =
@@ -117,7 +118,7 @@ namespace AmplifyShaderEditor
 				if( !dataCollector.IsSRP )
 				{
 					dataCollector.AddToIncludes( UniqueId, Constants.UnityLightingLib );
-
+					dataCollector.AddToDirectives( FwdBasePragma );
 					string texcoord1 = string.Empty;
 					string texcoord2 = string.Empty;
 

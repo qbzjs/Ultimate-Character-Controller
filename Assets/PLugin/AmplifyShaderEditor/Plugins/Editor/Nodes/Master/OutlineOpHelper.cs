@@ -344,7 +344,7 @@ namespace AmplifyShaderEditor
 
 					for( int i = 0; i < InputList.Count; i++ )
 					{
-						dataCollector.AddToInput( InputList[ i ].NodeId, InputList[ i ].PropertyName, true );
+						dataCollector.AddToInput( InputList[ i ].NodeId, InputList[ i ].PropertyName, !InputList[ i ].IsDirective );
 					}
 				}
 				else

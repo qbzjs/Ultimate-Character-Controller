@@ -313,7 +313,8 @@ namespace AmplifyShaderEditor
 				//masterNode.AdditionalIncludes.AddToDataCollector( ref outlineDataCollector );
 				//masterNode.AdditionalPragmas.AddToDataCollector( ref outlineDataCollector );
 				//masterNode.AdditionalDefines.AddToDataCollector( ref outlineDataCollector );
-				masterNode.AdditionalDirectives.AddAllToDataCollector( ref outlineDataCollector );
+				if( !masterNode.CustomShadowCaster )
+					masterNode.AdditionalDirectives.AddAllToDataCollector( ref outlineDataCollector );
 			}
 			
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.InputList = outlineDataCollector.InputList;
@@ -344,6 +345,7 @@ namespace AmplifyShaderEditor
 				dataCollector.AddToProperties( UniqueId, outlineDataCollector.PropertiesList[ i ].PropertyName, outlineDataCollector.PropertiesList[ i ].OrderIndex );
 			}
 
+			dataCollector.UsingInternalData = dataCollector.UsingInternalData || outlineDataCollector.UsingInternalData;
 			UIUtils.CurrentWindow.OutsideGraph.ResetNodesLocalVariablesIfNot( MasterNodePortCategory.Vertex );
 			return "0";
 		}

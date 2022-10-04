@@ -76,6 +76,7 @@ namespace AmplifyShaderEditor
 			m_textLabelWidth = 90;
 			m_useInternalPortData = true;
 			m_autoWrapProperties = true;
+			m_hasLeftDropdown = true;
 			m_tilingPort.Category = MasterNodePortCategory.Vertex;
 			m_offsetPort.Category = MasterNodePortCategory.Vertex;
 			UpdateOutput();
@@ -248,6 +249,22 @@ namespace AmplifyShaderEditor
 		//	base.Draw( drawInfo );
 		//	//CheckReference();
 		//}
+
+		public override void Draw( DrawInfo drawInfo )
+		{
+			base.Draw( drawInfo );
+
+			if( m_dropdownEditing )
+			{
+				EditorGUI.BeginChangeCheck();
+				m_texcoordSize = EditorGUIIntPopup( m_dropdownRect, m_texcoordSize, Constants.AvailableUVSizesStr, Constants.AvailableUVSizes, UIUtils.PropertyPopUp );
+				if( EditorGUI.EndChangeCheck() )
+				{
+					UpdateOutput();
+					DropdownEditing = false;
+				}
+			}
+		}
 
 		void CheckReference()
 		{

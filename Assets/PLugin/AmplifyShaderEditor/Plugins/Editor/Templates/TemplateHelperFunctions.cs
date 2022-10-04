@@ -1100,7 +1100,7 @@ namespace AmplifyShaderEditor
 			}
 		}
 
-		public static void CreateShaderPropertiesList( string propertyData, ref List<TemplateShaderPropertyData> propertiesList, ref Dictionary<string, TemplateShaderPropertyData> duplicatesHelper )
+		public static void CreateShaderPropertiesList( string propertyData, ref List<TemplateShaderPropertyData> propertiesList, ref Dictionary<string, TemplateShaderPropertyData> duplicatesHelper, int subShaderId, int passId)
 		{
 			int identationIdx = (int)TemplateShaderPropertiesIdx.Identation;
 			int nameIdx = (int)TemplateShaderPropertiesIdx.Name;
@@ -1119,7 +1119,9 @@ namespace AmplifyShaderEditor
 																								match.Groups[ inspectorNameIdx ].Value,
 																								match.Groups[ nameIdx ].Value,
 																								PropertyToWireType[ match.Groups[ typeIdx ].Value ],
-																								PropertyType.Property );
+																								PropertyType.Property,
+																								subShaderId,
+																								passId);
 						propertiesList.Add( newData );
 						duplicatesHelper.Add( newData.PropertyName, newData );
 					}	
@@ -1127,7 +1129,7 @@ namespace AmplifyShaderEditor
 			}
 		}
 		public const string DepthMacroDeclRegex = @"UNITY_DECLARE_DEPTH_TEXTURE\(\s*_CameraDepthTexture";
-		public static void CheckUnityBuiltinGlobalMacros( string propertyData, ref List<TemplateShaderPropertyData> propertiesList, ref Dictionary<string, TemplateShaderPropertyData> duplicatesHelper )
+		public static void CheckUnityBuiltinGlobalMacros( string propertyData, ref List<TemplateShaderPropertyData> propertiesList, ref Dictionary<string, TemplateShaderPropertyData> duplicatesHelper, int subShaderId, int passId )
 		{
 			Match match = Regex.Match( propertyData, DepthMacroDeclRegex );
 			if( match.Success )
@@ -1139,13 +1141,15 @@ namespace AmplifyShaderEditor
 																							Constants.CameraDepthTextureValue,
 																							WirePortDataType.SAMPLER2D,
 																							PropertyType.Global,
+																							subShaderId,
+																							passId,
 																							true );
 				duplicatesHelper.Add( newData.PropertyName, newData );
 				propertiesList.Add( newData );
 			}
 		}
 
-		public static void CreateShaderGlobalsList( string propertyData, ref List<TemplateShaderPropertyData> propertiesList, ref Dictionary<string, TemplateShaderPropertyData> duplicatesHelper )
+		public static void CreateShaderGlobalsList( string propertyData, ref List<TemplateShaderPropertyData> propertiesList, ref Dictionary<string, TemplateShaderPropertyData> duplicatesHelper,int subShaderId, int passId )
 		{
 			int typeIdx = (int)TemplateShaderGlobalsIdx.Type;
 			int nameIdx = (int)TemplateShaderGlobalsIdx.Name;
@@ -1166,7 +1170,9 @@ namespace AmplifyShaderEditor
 																								string.Empty,
 																								lineMatch.Groups[ nameIdx ].Value,
 																								CgToWirePortType[ lineMatch.Groups[ typeIdx ].Value ],
-																								PropertyType.Global );
+																								PropertyType.Global,
+																								subShaderId,
+																								passId);
 						duplicatesHelper.Add( newData.PropertyName, newData );
 						propertiesList.Add( newData );
 					}

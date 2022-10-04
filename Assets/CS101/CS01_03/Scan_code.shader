@@ -65,7 +65,9 @@ Shader "CS01_03/Scan_Code"
 			{
 				v2f o;
 				o.pos = UnityObjectToClipPos(v.vertex);
+				//法线计算
 				float3 normal_world = mul(float4(v.normal, 0.0), unity_WorldToObject).xyz;
+				//
 				float3 pos_world = mul(unity_ObjectToWorld, v.vertex).xyz;
 				o.normal_world = normalize(normal_world);
 				o.pos_world = pos_world;
@@ -76,20 +78,29 @@ Shader "CS01_03/Scan_Code"
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
+				//法线
 				half3 normal_world = normalize(i.normal_world);
+				//视线
 				half3 view_world = normalize(_WorldSpaceCameraPos.xyz - i.pos_world);
 				
-				//
+				//计算并限制在0，1范围内
 				half NdotV = saturate(dot(normal_world, view_world));
+				//菲涅尔因子
 				half fresnel = 1.0 - NdotV;
+				//
 				fresnel = smoothstep(_RimMin, _RimMax, fresnel);
+				//
 				half emiss = tex2D(_MainTex, i.uv).r;
 				emiss = pow(emiss, 5.0);
-
+				//
 				half final_fresnel = saturate(fresnel + emiss);
-
+				//
 				half3 final_rim_color = lerp(_InnerColor.xyz, _RimColor.xyz * _RimIntensity, final_fresnel);
+				//
 				half final_rim_alpha = final_fresnel;
+
+
+
 				//流光
 				half2 uv_flow = (i.pos_world.xy - i.pivot_world.xy) * _FlowTilling.xy;
 				uv_flow = uv_flow + _Time.y * _FlowSpeed.xy;

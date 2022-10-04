@@ -986,6 +986,20 @@ namespace AmplifyShaderEditor
 			}
 		}
 
+		public override string GenerateSamplerPropertyName( int outputId, ref MasterNodeDataCollector dataCollector )
+		{
+			string generatedSamplerState = PropertyName;
+			if( m_forceSamplingMacrosGen )
+			{
+				generatedSamplerState = GeneratorUtils.GenerateSamplerState( ref dataCollector, UniqueId, PropertyName );
+			}
+
+			if( outputId > 0 )
+				return generatedSamplerState;
+			else
+				return PropertyName;
+		}
+
 		public override string GenerateShaderForOutput( int outputId, ref MasterNodeDataCollector dataCollector, bool ignoreLocalVar )
 		{
 			if( dataCollector.PortCategory == MasterNodePortCategory.Tessellation )

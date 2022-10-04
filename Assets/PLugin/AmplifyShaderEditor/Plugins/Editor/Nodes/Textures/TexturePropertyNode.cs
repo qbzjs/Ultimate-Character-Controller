@@ -106,6 +106,8 @@ namespace AmplifyShaderEditor
 
 		protected bool m_isEditingPicker;
 
+		protected bool m_forceSamplingMacrosGen = false;
+
 		public TexturePropertyNode() : base() { }
 		public TexturePropertyNode( int uniqueId, float x, float y, float width, float height ) : base( uniqueId, x, y, width, height ) { }
 		protected override void CommonInit( int uniqueId )
@@ -739,13 +741,44 @@ namespace AmplifyShaderEditor
 			GUI.Label( newRect, string.Empty, UIUtils.GetCustomStyle( CustomStyle.SamplerFrame ) );
 		}
 
+		public override void CheckIfAutoRegister( ref MasterNodeDataCollector dataCollector )
+		{
+			// Also testing inside shader function because node can be used indirectly over a custom expression and directly over a Function Output node 
+			// That isn't being used externaly making it to not be registered ( since m_connStatus it set to Connected by being connected to an output node
+			if( CurrentParameterType != PropertyType.Constant && m_autoRegister && ( m_connStatus != NodeConnectionStatus.Connected || InsideShaderFunction ) )
+			{
+				RegisterProperty( ref dataCollector );
+				if( m_autoRegister && m_containerGraph.ParentWindow.OutsideGraph.SamplingMacros )
+				{
+					GeneratorUtils.GenerateSamplerState( ref dataCollector, UniqueId, PropertyName );
+				}
+			}
+		}
+
+		public string GenerateSamplerState( ref MasterNodeDataCollector dataCollector )
+		{
+			return GeneratorUtils.GenerateSamplerState( ref dataCollector, UniqueId, PropertyName );
+		}
+
+		public virtual string GenerateSamplerPropertyName( int outputId, ref MasterNodeDataCollector dataCollector )
+		{
+			string generatedSamplerState = string.Empty;
+
+			if( outputId > 0 || m_forceSamplingMacrosGen )
+			{
+				generatedSamplerState = GeneratorUtils.GenerateSamplerState( ref dataCollector, UniqueId, PropertyName );
+			}
+
+			if( outputId > 0 )
+				return generatedSamplerState;
+			else
+				return PropertyName;
+		}
+
 		public string BaseGenerateShaderForOutput( int outputId, ref MasterNodeDataCollector dataCollector, bool ignoreLocalVar )
 		{
 			base.GenerateShaderForOutput( outputId, ref dataCollector, ignoreLocalVar );
-			if( outputId > 0 )
-				return GeneratorUtils.GenerateSamplerState( ref dataCollector, UniqueId, PropertyName );
-			else
-				return PropertyName;
+			return GenerateSamplerPropertyName( outputId , ref dataCollector );
 		}
 
 		public override string GenerateShaderForOutput( int outputId, ref MasterNodeDataCollector dataCollector, bool ignoreLocalVar )
@@ -1100,5 +1133,6 @@ namespace AmplifyShaderEditor
 		{
 			get { return m_autocastMode; }
 		}
+		public bool ForceSamplingMacrosGen { set { m_forceSamplingMacrosGen = value; } }
 	}
 }

@@ -487,7 +487,7 @@ namespace AmplifyShaderEditor
 				}
 				else
 				{
-					result = Constants.VertexShaderInputStr + "." + texCoordNameOut;
+					result = Constants.VertexShaderInputStr + "." + texCoordNameIn;
 				}
 				
 				if( !string.IsNullOrEmpty( propertyName ) )
@@ -507,6 +507,22 @@ namespace AmplifyShaderEditor
 					}
 
 					result = varName;
+				}
+
+				switch( size )
+				{
+					default:
+					case WirePortDataType.FLOAT2:
+					{
+						result += ".xy";
+					}
+					break;
+					case WirePortDataType.FLOAT3:
+					{
+						result += ".xyz";
+					}
+					break;
+					case WirePortDataType.FLOAT4: break;
 				}
 
 				return result;

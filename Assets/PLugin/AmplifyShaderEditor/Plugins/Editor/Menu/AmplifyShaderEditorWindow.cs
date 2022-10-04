@@ -1703,6 +1703,10 @@ namespace AmplifyShaderEditor
 				case ToolButtonType.Options: { } break;
 				case ToolButtonType.Update:
 				{
+					if( Preferences.GlobalClearLog )
+					{
+						m_consoleLogWindow.ClearMessages();
+					}
 					SaveToDisk( false );
 				}
 				break;

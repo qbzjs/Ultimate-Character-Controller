@@ -1072,6 +1072,8 @@ namespace AmplifyShaderEditor
 			else
 			{
 				CurrentVarMode = (StaticSwitchVariableMode)m_variableMode;
+				//Resetting m_variableMode to its default value since it will no longer be used and interfere released ransom properties behavior
+				m_variableMode = VariableMode.Create;
 			}
 
 			if( CurrentVarMode == StaticSwitchVariableMode.Reference )
@@ -1100,6 +1102,16 @@ namespace AmplifyShaderEditor
 			{
 				ContainerGraph.StaticSwitchNodes.UpdateDataOnNode( UniqueId, DataToArray );
 			}
+		}
+
+		public override void ReleaseRansomedProperty()
+		{
+			//on old ASE, the property node m_variableMode was used on defining the static switch type, now we have a specific m_staticSwitchVarMode over here
+			//the problem with this is the fix made to release ransomend property names( hash deb232819fff0f1aeaf029a21c55ef597b3424de ) uses m_variableMode and 
+			//makes old static switches to attempt and register an already registered name when doing this:
+			//CurrentVariableMode = VariableMode.Create;
+			//So we need to disable this release ransom property behavior as m_variableMode should never be on VariableMode.Create 
+			//The m_variableMode is set to its default value over the ReadFromString method after its value as been set over the new m_staticSwitchVarMode variable
 		}
 
 		void SetMaterialToggleRetrocompatibility()
@@ -1203,6 +1215,9 @@ namespace AmplifyShaderEditor
 		{
 			get
 			{
+				if( CurrentVarMode == StaticSwitchVariableMode.Fetch )
+					return m_currentKeyword;
+
 				return ( m_lockKeyword || string.IsNullOrEmpty( m_currentKeyword ) ? PropertyName + OnOffStr : m_currentKeyword );
 			}
 		}

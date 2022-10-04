@@ -666,7 +666,7 @@ namespace AmplifyShaderEditor
 		{
 			if( !string.IsNullOrEmpty( name ) && !duplicatesHelper.ContainsKey( name ))
 			{
-				TemplateShaderPropertyData newData = new TemplateShaderPropertyData( -1, string.Empty, string.Empty, name, name, WirePortDataType.INT, PropertyType.Property );
+				TemplateShaderPropertyData newData = new TemplateShaderPropertyData( -1, string.Empty, string.Empty, name, name, WirePortDataType.INT, PropertyType.Property,-1,-1 );
 				availableShaderProperties.Add( newData );
 				duplicatesHelper.Add( newData.PropertyName , newData );
 			}
