@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: d32e556aaad4e804a8b020d6ad96873a
+timeCreated: 1489078120
+licenseType: Store
+ShaderImporter:
+  defaultTextures:
+  - _MainTex: {instanceID: 0}
+  - _BackGround: {fileID: 2800000, guid: 750b1bd7ba8bd28489650de6d0a95cc5, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
