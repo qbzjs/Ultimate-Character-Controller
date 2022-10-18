@@ -1,0 +1,498 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1246994654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246994655}
+  - component: {fileID: 1246994661}
+  - component: {fileID: 1246994659}
+  - component: {fileID: 1246994658}
+  - component: {fileID: 1246994656}
+  - component: {fileID: 1246994662}
+  m_Layer: 0
+  m_Name: ThirdPersonControllerParticleStream
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1246994655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246994654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1931558351}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1246994661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246994654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73d2e6c883c6804c87c5da983c35d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_ItemDefinition: {fileID: 114957327483737902, guid: 5481010ef14c32f4cb7b6661b0c59fb4,
+    type: 2}
+  m_SlotID: 0
+  m_AnimatorItemID: 62
+  m_AnimatorMovementSetID: 0
+  m_DominantItem: 1
+  m_UniqueItemSet: 1
+  m_AllowCameraZoom: 1
+  m_DropPrefab: {fileID: 0}
+  m_DropVelocityMultiplier: 4
+  m_FullInventoryDrop: 0
+  m_DropConsumableItems: 1
+  m_EquipEvent:
+    m_WaitForAnimationEvent: 0
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_EquipCompleteEvent:
+    m_WaitForAnimationEvent: 0
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_EquipAnimatorAudioStateSet:
+    m_AnimatorAudioStateSelectorData:
+      m_ObjectType: Opsive.UltimateCharacterController.Items.AnimatorAudioStates.Sequence
+      m_ValueHashes: 6dc4e8ab
+      m_ValuePositions: 00000000
+      m_Values: 000080bf
+      m_UnityObjects: []
+      m_Version: 3.0
+    m_States:
+    - m_States:
+      - m_Name: Default
+        m_Preset: {fileID: 0}
+        m_BlockList: []
+        m_Default: 1
+      m_Enabled: 1
+      m_AllowDuringMovement: 1
+      m_RequireGrounded: 0
+      m_StateName: 
+      m_ItemSubstateIndex: 0
+      m_AudioClipSet:
+        m_AudioConfig: {fileID: 0}
+        m_AudioClips: []
+  m_UnequipEvent:
+    m_WaitForAnimationEvent: 0
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_UnequipCompleteEvent:
+    m_WaitForAnimationEvent: 0
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_UnequipAnimatorAudioStateSet:
+    m_AnimatorAudioStateSelectorData:
+      m_ObjectType: Opsive.UltimateCharacterController.Items.AnimatorAudioStates.Sequence
+      m_ValueHashes: 6dc4e8ab
+      m_ValuePositions: 00000000
+      m_Values: 000080bf
+      m_UnityObjects: []
+      m_Version: 3.0
+    m_States:
+    - m_States:
+      - m_Name: Default
+        m_Preset: {fileID: 0}
+        m_BlockList: []
+        m_Default: 1
+      m_Enabled: 1
+      m_AllowDuringMovement: 1
+      m_RequireGrounded: 0
+      m_StateName: 
+      m_ItemSubstateIndex: 0
+      m_AudioClipSet:
+        m_AudioConfig: {fileID: 0}
+        m_AudioClips: []
+  m_UIMonitorID: 0
+  m_Icon: {fileID: 0}
+  m_ShowCrosshairsOnAim: 1
+  m_CenterCrosshairs: {fileID: 0}
+  m_QuadrantOffset: 5
+  m_MaxQuadrantSpread: 10
+  m_QuadrantSpreadDamping: 0.05
+  m_LeftCrosshairs: {fileID: 0}
+  m_TopCrosshairs: {fileID: 0}
+  m_RightCrosshairs: {fileID: 0}
+  m_BottomCrosshairs: {fileID: 0}
+  m_ShowFullScreenUI: 0
+  m_FullScreenUIID: -1
+  m_PickupItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_EquipItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_UnequipItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DropItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1246994659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246994654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b5dc98af0593b4589b67fcfc5b4c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_Object: {fileID: 1931558350}
+  m_LocalSpawnPosition: {x: 0, y: 0, z: 0}
+  m_LocalSpawnRotation: {x: -0, y: 0, z: 0}
+  m_LocalSpawnScale: {x: 1, y: 1, z: 1}
+  m_NonDominantHandIKTarget: {fileID: 0}
+  m_NonDominantHandIKTargetID: -1
+  m_NonDominantHandIKTargetHint: {fileID: 0}
+  m_NonDominantHandIKTargetHintID: -1
+  m_HolsterTarget: {fileID: 0}
+  m_HolsterID: -1
+--- !u!114 &1246994658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246994654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f1d5a87293b3747bb8ea73aee1eae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_ID: 0
+  m_UseRate: 0
+  m_CanEquipEmptyItem: 1
+  m_FaceTarget: 1
+  m_StopUseAbilityDelay: 0
+  m_UseEvent:
+    m_WaitForAnimationEvent: 1
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_UseCompleteEvent:
+    m_WaitForAnimationEvent: 1
+    m_Duration: 0.2
+    m_WaitForSlotEvent: 0
+  m_ForceRootMotionPosition: 0
+  m_ForceRootMotionRotation: 0
+  m_UseAttributeName: Mana
+  m_UseAttributeAmount: 0.3
+  m_DropWhenUseDepleted: 0
+  m_CharacterUseAttributeName: 
+  m_CharacterUseAttributeAmount: 0
+  m_PlayAudioOnStartUse: 0
+  m_UseAnimatorAudioStateSet:
+    m_AnimatorAudioStateSelectorData:
+      m_ObjectType: Opsive.UltimateCharacterController.Items.AnimatorAudioStates.Sequence
+      m_ValueHashes: 6dc4e8ab
+      m_ValuePositions: 00000000
+      m_Values: 000080bf
+      m_UnityObjects: []
+      m_Version: 3.0
+    m_States:
+    - m_States:
+      - m_Name: Default
+        m_Preset: {fileID: 0}
+        m_BlockList: []
+        m_Default: 1
+      m_Enabled: 1
+      m_AllowDuringMovement: 1
+      m_RequireGrounded: 0
+      m_StateName: 
+      m_ItemSubstateIndex: 2
+      m_AudioClipSet:
+        m_AudioConfig: {fileID: 0}
+        m_AudioClips: []
+  m_RequireGrounded: 1
+  m_Direction: 1
+  m_UseLookSource: 0
+  m_MaxDistance: 100
+  m_Radius: 0.01
+  m_DetectLayers:
+    serializedVersion: 2
+    m_Bits: 67108865
+  m_MaxAngle: 30
+  m_MaxCollisionCount: 100
+  m_TargetCount: 1
+  m_SurfaceIndicator: {fileID: 0}
+  m_SurfaceIndicatorOffset: {x: 0, y: 0.1, z: 0}
+  m_UseType: 1
+  m_MinContinuousUseDuration: -1
+  m_ContinuousCast: 1
+  m_UseAmount: 0
+  m_InterruptSource: 0
+  m_SurfaceImpact: {fileID: 0}
+  m_CanStopSubstateIndexAddition: 10
+  m_OnStartStopBeginEndActionsEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnCastEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnImpactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_BeginActionData: []
+  m_CastActionData:
+  - m_ObjectType: Opsive.UltimateCharacterController.Items.Actions.Magic.CastActions.SpawnParticle
+    m_ValueHashes: b892271ef386732dda46c359da4a13812a613f7b8f8712954a5d8b2612c7967027500971bcf25095d4a745068e3dbac40f19c5a30844ba5126ca4593a8e03ed5ee236b15ed31610b3720b94da1709f31
+    m_ValuePositions: 0000000004000000040000000b0000000f0000001300000014000000180000001c0000002800000034000000350000003600000037000000380000003c00000040000000440000004800000052000000
+    m_Values: 0100000044656661756c74ffffffff00000000010000000000000000000000006666a63f9a99f93f00000000000034430000000001000001cdcccc3d020000000000803ecdcc4c3d5f54696e74436f6c6f72cdcc4c3d
+    m_UnityObjects:
+    - {fileID: 6756225262336711168, guid: 45d26fba8aeefca4a820e97b9f8ad09a, type: 3}
+    m_Version: 3.1
+  - m_ObjectType: Opsive.UltimateCharacterController.Items.Actions.Magic.CastActions.TargetImpact
+    m_ValueHashes: b892271ef386732dda46c359da4a13812a613f7b8f8712954a5d8b26
+    m_ValuePositions: 0000000004000000040000000b0000000f0000001300000014000000
+    m_Values: 0100000044656661756c74ffffffff0000000001cdcc4c3e
+    m_UnityObjects: []
+    m_Version: 3.1
+  - m_ObjectType: Opsive.UltimateCharacterController.Items.Actions.Magic.CastActions.PlayAudioClip
+    m_ValueHashes: b892271ef386732dda46c359da4a13812a613f7b8f8712954a5d8b26375f684550007d5c731fa1dc5652580c6dc1b009ed31610ba1709f31
+    m_ValuePositions: 0000000004000000040000000b0000000f0000001300000014000000180000001c000000200000002400000025000000260000002a000000
+    m_Values: 0100000044656661756c74ffffffff000000000100000000ffffffff01000000000000000101cdcccc3dcdcc4c3d
+    m_UnityObjects:
+    - {fileID: 8300000, guid: b3442c20d05191c4dac0dcce033ecac2, type: 3}
+    m_Version: 3.1
+  m_ImpactActionData:
+  - m_ObjectType: Opsive.UltimateCharacterController.Items.Actions.Magic.ImpactActions.SpawnParticle
+    m_ValueHashes: b892271ef386732dda46c359da4a13812a613f7b8f87129512c7967027500971bcf25095b2aab8ee
+    m_ValuePositions: 0000000004000000040000000b0000000f0000001300000014000000180000002400000030000000
+    m_Values: 0100000044656661756c74ffffffff00000000010000000000000000cdcc4c3dcdcccc3d00000000000000000000000000
+    m_UnityObjects:
+    - {fileID: 6167959196816370920, guid: e6ab9167bb901044495ea4a024d74c34, type: 3}
+    m_Version: 3.1
+  - m_ObjectType: Opsive.UltimateCharacterController.Items.Actions.Magic.ImpactActions.AddForce
+    m_ValueHashes: b892271ef386732dda46c359da4a13812a613f7b8f871295635295174ce983ba0ec68bb3ef8367fb
+    m_ValuePositions: 0000000004000000040000000b0000000f0000001300000014000000200000002000000024000000
+    m_Values: 0100000044656661756c74ffffffff000000000100000000000000000000a0400100000001
+    m_UnityObjects: []
+    m_Version: 3.1
+  m_EndActionData: []
+--- !u!114 &1246994656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246994654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3b0504779f571418ec05e45a544070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_ActionID: 0
+  m_OriginLocation: {fileID: 0}
+  m_OriginLocationID: -1
+--- !u!114 &1246994662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246994654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30da4fa96ed67145a2c5310eca67bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Attributes:
+  - m_States:
+    - m_Name: Default
+      m_Preset: {fileID: 0}
+      m_BlockList: []
+      m_Default: 1
+    m_Name: Mana
+    m_MinValue: 0
+    m_MaxValue: 100
+    m_Value: 100
+    m_AutoUpdateValueType: 2
+    m_AutoUpdateStartDelay: 1
+    m_AutoUpdateInterval: 0.1
+    m_AutoUpdateAmount: 0.2
+--- !u!1 &1931558350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1931558351}
+  - component: {fileID: 1931558353}
+  - component: {fileID: 1931558352}
+  m_Layer: 30
+  m_Name: ThirdPersonParticleStream
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1931558351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931558350}
+  m_LocalRotation: {x: 0.60747766, y: 0.3542994, z: -0.58870786, w: 0.39858}
+  m_LocalPosition: {x: 0.67813873, y: 1.2949572, z: -0.019271167}
+  m_LocalScale: {x: 0.9999936, y: 1.0000045, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1246994655}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1931558353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931558350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edead2b42b914a84faf341ae0d10c805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_ForceVisible: 0
+  m_FirstPersonVisibleOnDeath: 0
+--- !u!82 &1931558352
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931558350}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
